@@ -1,6 +1,6 @@
 # 📋 AI 契約條款自動審查教學
 
-> 用大語言模型（Claude AI）幫 B 公司法務部門自動審查契約條款，產出分析報告。
+> 用大語言模型（Gemini / GPT / Claude）幫 B 公司法務部門自動審查契約條款，產出分析報告。
 
 ---
 
@@ -10,7 +10,7 @@
 
 | 版本 | 說明 | 開啟 |
 |------|------|------|
-| 📘 教材版 | 有完整步驟說明，適合初次學習 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mjib007/contract-review/blob/main/contract_review_colab.ipynb) |
+| 📘 教材版 | 有完整步驟說明，支援 Gemini / GPT / Claude 三選一 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mjib007/contract-review/blob/main/contract_review_colab.ipynb) |
 
 ---
 
@@ -23,6 +23,18 @@
 - 關閉視窗後，執行結果不會保留（但你可以下載報告）
 
 > ⚠️ 需要登入 Google 帳號才能使用 Colab（免費）
+
+---
+
+## 🤖 支援的 AI 模型（三選一）
+
+| 模型 | 費用 | 推薦對象 | 申請網址 |
+|------|------|---------|---------|
+| 🟢 **Gemini**（Google） | ✅ 有免費額度，每天1,500次 | ⭐ 學生首選 | https://aistudio.google.com/ |
+| 🟡 **GPT**（OpenAI） | 新帳號有試用金 | 一般使用者 | https://platform.openai.com/ |
+| 🔵 **Claude**（Anthropic） | 需付費 | 進階使用者 | https://console.anthropic.com/ |
+
+> 💡 **學生推薦使用 Gemini**，用 Google 帳號登入即可，完全免費！
 
 ---
 
@@ -48,15 +60,13 @@
 ## 🔄 執行流程
 
 ```
-📁 party_data.json          📄 contract_template.txt
-（GitHub 上的當事人資料）    （GitHub 上的契約範本）
-        ↓                           ↓
-        └──────── 自動下載並填充 ────┘
+Step 2：選擇 AI 模型（gemini / gpt / claude）並填入金鑰
                       ↓
-            📄 完整契約文字
+📁 party_data.json + 📄 contract_template.txt（從 GitHub 自動下載）
                       ↓
-          🤖 呼叫 Claude API（LLM）
-          依照 5 條審查規則逐一分析
+            自動填充 → 完整契約文字
+                      ↓
+     🤖 呼叫選定的 AI，依照 5 條規則逐一審查
                       ↓
             📊 輸出審查分析報告（可下載）
 ```
@@ -67,21 +77,10 @@
 
 | 檔案 | 用途 |
 |------|------|
-| `contract_review_colab.ipynb` | 主教材（Colab 版，Step 1～8） |
-| `contract_template.txt` | 技術服務契約範本（含 `{{佔位符}}`） |
+| `contract_review_colab.ipynb` | 主教材（支援三個 AI 模型） |
+| `contract_template.txt` | 技術服務契約範本（含佔位符） |
 | `party_data.json` | 當事人資料（可直接修改測試） |
 | `README.md` | 本說明文件 |
-
----
-
-## 🔑 使用前準備：取得 Claude API 金鑰
-
-1. 前往 👉 https://console.anthropic.com/ 註冊帳號
-2. 點選左側「API Keys」→「Create Key」
-3. 複製金鑰（格式：`sk-ant-api03-...`）
-4. 開啟 Colab 後，貼到 Step 2 的欄位中
-
-> 💡 新帳號通常有免費額度，足夠上課使用。
 
 ---
 
@@ -89,9 +88,9 @@
 
 | 練習 | 內容 |
 |------|------|
-| 練習一 | 修改 `party_data.json` 的違約金比例，觀察審查結果變化 |
+| 練習一 | 分別用三個 AI 模型審查同一份契約，比較結果差異 |
 | 練習二 | 在 Colab 中新增第六條審查規則（爭議解決機制） |
-| 練習三 | 改用 `claude-haiku-4-5-20251001` 模型，比較審查品質與速度 |
+| 練習三 | 修改 `party_data.json` 的違約金比例，觀察審查結果變化 |
 
 ---
 
