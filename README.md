@@ -60,16 +60,41 @@
 ## 🔄 執行流程
 
 ```
-Step 2：選擇 AI 模型（gemini / gpt / claude）並填入金鑰
+Step 2：下拉選單選擇 AI 模型 → 輸入框貼上金鑰（輸入內容隱藏）
                       ↓
-📁 party_data.json + 📄 contract_template.txt（從 GitHub 自動下載）
+Step 3：自動偵測目前開啟的 GitHub repo → 產生正確的資料來源網址
                       ↓
-            自動填充 → 完整契約文字
+Step 4：自動下載 party_data.json + contract_template.txt
                       ↓
-     🤖 呼叫選定的 AI，依照 5 條規則逐一審查
+Step 5：自動填充 → 產生完整契約文字
                       ↓
-            📊 輸出審查分析報告（可下載）
+Step 7：呼叫選定的 AI，依照 5 條規則逐一審查
+                      ↓
+Step 8：輸出審查分析報告（可下載）
 ```
+
+---
+
+## 🍴 Fork 說明
+
+想要**修改資料做練習**的同學，可以 fork 這個 repo：
+
+### Fork 步驟
+1. 點右上角「**Fork**」按鈕，複製一份到你自己的 GitHub 帳號
+2. 在你自己的 repo 中，點選 `party_data.json` → 點鉛筆圖示編輯
+3. 修改裡面的資料（例如把違約金比例改成 `"8"`）→「Commit changes」
+4. 回到你自己的 repo 首頁，點「**Open in Colab**」按鈕開啟
+
+### ✅ 資料來源自動切換
+程式內建**自動偵測功能**：
+- 從**老師的 repo** 開啟 → 自動抓老師的資料
+- 從**你 fork 的 repo** 開啟 → 自動抓你修改後的資料
+
+**不需要改任何程式碼**，Colab 開啟時會自動判斷。
+
+> ⚠️ 注意：fork 後，你的 repo 首頁的 Open in Colab 按鈕會連結到**老師的 Notebook**。  
+> 若要用自己的 Notebook，請到你的 repo 點選 `contract_review_colab.ipynb` 檔案，  
+> 再點右上角的「Open in Colab」。
 
 ---
 
@@ -77,20 +102,20 @@ Step 2：選擇 AI 模型（gemini / gpt / claude）並填入金鑰
 
 | 檔案 | 用途 |
 |------|------|
-| `contract_review_colab.ipynb` | 主教材（支援三個 AI 模型） |
+| `contract_review_colab.ipynb` | 主教材（支援三個 AI 模型，含自動偵測 repo） |
 | `contract_template.txt` | 技術服務契約範本（含佔位符） |
-| `party_data.json` | 當事人資料（可直接修改測試） |
+| `party_data.json` | 當事人資料（**fork 後可直接修改此檔做練習**） |
 | `README.md` | 本說明文件 |
 
 ---
 
 ## 🎓 延伸練習
 
-| 練習 | 內容 |
-|------|------|
-| 練習一 | 分別用三個 AI 模型審查同一份契約，比較結果差異 |
-| 練習二 | 在 Colab 中新增第六條審查規則（爭議解決機制） |
-| 練習三 | 修改 `party_data.json` 的違約金比例，觀察審查結果變化 |
+| 練習 | 建議方式 | 內容 |
+|------|---------|------|
+| 練習一 | 直接在 Colab 操作 | 分別用三個 AI 模型審查同一份契約，比較結果差異 |
+| 練習二 | 直接在 Colab 操作 | 在 Step 6 新增第六條審查規則（爭議解決機制） |
+| 練習三 | **Fork 後修改 JSON** | 修改 `party_data.json` 的違約金比例，觀察審查結果變化 |
 
 ---
 
