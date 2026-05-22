@@ -1,0 +1,29 @@
+{
+  "PARTY_A_NAME": "台灣科技股份有限公司",
+  "PARTY_A_TAX_ID": "12345678",
+  "PARTY_A_REPRESENTATIVE": "陳大明",
+  "PARTY_A_ADDRESS": "台北市信義區信義路五段7號",
+  "PARTY_A_PHONE": "02-2345-6789",
+
+  "PARTY_B_NAME": "智慧資訊有限公司",
+  "PARTY_B_TAX_ID": "87654321",
+  "PARTY_B_REPRESENTATIVE": "林小華",
+  "PARTY_B_ADDRESS": "台北市中山區南京東路三段100號",
+  "PARTY_B_PHONE": "02-9876-5432",
+
+  "SERVICE_DESCRIPTION": "企業資訊系統整合與導入",
+  "START_DATE": "2025年6月1日",
+  "END_DATE": "2025年12月31日",
+
+  "TOTAL_AMOUNT": "2,000,000",
+  "DEPOSIT_AMOUNT": "600,000",
+  "FINAL_AMOUNT": "1,400,000",
+  "PAYMENT_DAYS": "30",
+
+  "CONFIDENTIALITY_YEARS": "3",
+  "PENALTY_RATIO": "3",
+  "NOTICE_DAYS": "30",
+
+  "JURISDICTION": "臺北",
+  "SIGNING_DATE": "2025年5月22日"
+}
