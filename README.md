@@ -1,5 +1,14 @@
 # 📋 AI 契約條款自動審查教學
 
+![Profile views](https://komarev.com/ghpvc/?username=mjib007&label=Profile%20views&color=4c8eda&style=flat)
+[![Stars](https://img.shields.io/github/stars/mjib007/contract-review?style=flat&color=yellow)](https://github.com/mjib007/contract-review/stargazers)
+[![Forks](https://img.shields.io/github/forks/mjib007/contract-review?style=flat&color=blue)](https://github.com/mjib007/contract-review/network/members)
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Platform](https://img.shields.io/badge/Platform-Google%20Colab-orange)
+![AI](https://img.shields.io/badge/AI-Gemini%20%7C%20GPT%20%7C%20Claude-green)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+![Status](https://img.shields.io/badge/status-active-success)
+
 > 用大語言模型（Gemini / GPT / Claude）幫 B 公司法務部門自動審查契約條款，產出分析報告。
 
 ---
@@ -83,7 +92,8 @@ Step 8：輸出審查分析報告（可下載）
 1. 點右上角「**Fork**」按鈕，複製一份到你自己的 GitHub 帳號
 2. 在你自己的 repo 中，點選 `party_data.json` → 點鉛筆圖示編輯
 3. 修改裡面的資料（例如把違約金比例改成 `"8"`）→「Commit changes」
-4. 回到你自己的 repo 首頁，點「**Open in Colab**」按鈕開啟
+4. 回到你自己的 repo 首頁，點選 `contract_review_colab.ipynb` 檔案
+5. 點右上角的「**Open in Colab**」開啟
 
 ### ✅ 資料來源自動切換
 程式內建**自動偵測功能**：
@@ -92,9 +102,8 @@ Step 8：輸出審查分析報告（可下載）
 
 **不需要改任何程式碼**，Colab 開啟時會自動判斷。
 
-> ⚠️ 注意：fork 後，你的 repo 首頁的 Open in Colab 按鈕會連結到**老師的 Notebook**。  
-> 若要用自己的 Notebook，請到你的 repo 點選 `contract_review_colab.ipynb` 檔案，  
-> 再點右上角的「Open in Colab」。
+> ⚠️ 注意：fork 後請從你自己 repo 裡的 `.ipynb` 檔案點「Open in Colab」，  
+> 不要點 README 上的按鈕（那個會連到老師的版本）。
 
 ---
 
