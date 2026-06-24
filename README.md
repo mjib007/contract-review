@@ -11,6 +11,8 @@
 
 > 用大語言模型（Gemini / GPT / Claude）幫 B 公司法務部門自動審查契約條款，產出分析報告。
 
+![AI契約審查五步驟](https://github.com/mjib007/contract-review/blob/main/contract.png?raw=true)
+
 ---
 
 ## 🚀 快速開始（點一下，直接執行）
